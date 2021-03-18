@@ -261,6 +261,10 @@ bool isDie(Bird bird, Column column[], int num)
 		   flag = true;
 	   }
    }
+   if (bird.yBird > windowsWidth || bird.yBird < 0)
+   {
+	   flag = true;
+   }
    return flag;
  }
  
