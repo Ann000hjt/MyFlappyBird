@@ -251,12 +251,16 @@ bool isDie(Bird bird, Column column[], int num)
 	   }
 	   else
 	   {
-		   closestPointX = bird.yBird;
+		   closestPointY = bird.yBird;
 	   }
 	   //square of d,radius
 	   double dFang = pow(bird.xBird - closestPointX, 2) + pow(bird.yBird - closestPointY, 2);
 	   double rFang = pow(radius, 2);
 	   if (dFang <= rFang)
+	   {
+		   flag = true;
+	   }
+	   if (bird.yBird < 0 + radius || bird.yBird >windowsWidth - radius)
 	   {
 		   flag = true;
 	   }
